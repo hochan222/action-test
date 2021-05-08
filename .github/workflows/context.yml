@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    	- name: "context"
-			  run: echo "commit id => $COMMIT_ID"
-      	env:
-        	COMMIT_ID: ${{ github.sha }}
+      - name: "context"
+        run: echo "commit id => $COMMIT_ID"
+        env:
+          COMMIT_ID: ${{ github.sha }}
 
