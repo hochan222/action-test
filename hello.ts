@@ -1,8 +1,13 @@
 #!/usr/bin/env ts-node
 // file: pizza-hit.ts
 import { program } from "@caporal/core"
+import path from "path"
 
 program
+  .name("My super program")
+  .version("1.0.0")
+  .description("A program that does something.")
+  .discover(path.join(__dirname, ""))
   // First possible command: "order"
   .command("order", "Order a pizza")
   .argument("<type>", "Type of pizza")
