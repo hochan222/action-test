@@ -7,9 +7,10 @@ program
   .name("My super program")
   .version("1.0.0")
   .description("A program that does something.")
-  .discover(path.join(__dirname, ""))
+  // .discover(path.join(__dirname, ""))
   // First possible command: "order"
   .command("order", "Order a pizza")
+  .alias("i", "setup")
   .argument("<type>", "Type of pizza")
   .option("-e, --extra-ingredients <ingredients>", "Extra ingredients")
   .action(({ logger, args, options }) => {
